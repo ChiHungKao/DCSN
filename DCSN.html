@@ -1,0 +1,944 @@
+<style type="text/css">
+ * { padding: 0; margin: 0;}
+
+    .container {
+        padding: 0px;
+        margin: 0px;
+        color: #404040;
+        font-size: 11pt;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        color: #444;
+        /*background-color: #FFFFFF;*/
+        /*background: linear-gradient(to right, white, #eee, white);
+        background: -webkit-linear-gradient( right, white, #eee, white)*/
+        /*background-image: url("/PaintSwatches_1400x900.jpg");*/
+        /*font-family: 'textbook', arial, sans-serif;*/
+        /*margin-left: auto;
+        margin-right: auto;*/
+        /*max-width: 2000px;*/
+    }
+    body {
+        background-color: #FFFFFF !important;
+        background-color: #FFFFFF !important;
+    }
+
+
+   .section {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+
+   .title {
+      color: #000000;
+      font-family: 'Roboto Condensed', sans-serif;
+      padding-top: 10px;
+      padding-bottom: 25px;
+      font-size: 36pt;
+      line-height: 100%;
+      font-weight: 700;
+      color: #444;
+    }
+    
+    .author {
+      font-size: 13pt;
+    }
+
+    .section_title {
+      color: #000000;
+      font-family: 'Roboto Condensed', sans-serif;
+      /*padding-top: 10px;*/
+      /*padding-bottom: 10px;*/
+      font-size: 24pt;
+      line-height: 100%;
+      font-weight: 700;
+      padding-bottom: 10px;
+      color: #444;
+      /*margin-left: auto;
+        margin-right: auto;
+      /*line-height: 100%;*/
+      /*font-weight: 700;*/
+    }
+    
+  .shadow {
+      -webkit-box-shadow: 5px 5px 5px #aaa;
+      -moz-box-shadow: 5px 5px 5px #aaa;
+      box-shadow: 5px 5px 5px #aaa;
+      margin-bottom: 10px;
+  }
+
+  .aff {
+      margin-bottom: 16px;
+      /*max-width: 40px;*/
+      max-height: 30px
+  }
+
+
+
+    .img_authors {
+      position: relative;
+      max-width: 130px;
+      max-height: 130px
+    }
+
+    .img_links {
+      position: relative;
+      max-width: 70px;
+      max-height: 70px
+    }
+
+
+.text {
+    position:relative;
+    line-height:2em;
+    overflow:hidden;
+}
+.fadingEffect {
+    position:relative;
+    top:0; bottom:0; right:0;
+    width:100%;
+    background:#FFFAFA;
+    -moz-animation: showHide 5s ease-in alternate infinite; /* Firefox */
+    -webkit-animation: showHide 5s ease-in alternate infinite; /* Safari and Chrome */
+    -ms-animation: showHide 5s ease-in alternate infinite; /* IE10 */
+    -o-animation: showHide 5s ease-in alternate infinite; /* Opera */
+    animation: showHide 5s ease-in alternate infinite;
+}
+@-webkit-keyframes showHide { /* Chrome, Safari */
+    0% {width:100%}
+    40% {width:0%}
+    60% {width:0%;}
+    100% {width:100%;}
+}
+@-moz-keyframes showHide { /* FF */
+    0% {width:100%}
+    40% {width:0%}
+    60% {width:0%;}
+    100% {width:100%;}
+}
+@-ms-keyframes showHide { /* IE10 */
+    0% {width:100%}
+    40% {width:0%}
+    60% {width:0%;}
+    100% {width:100%;}
+}
+@-o-keyframes showHide { /* Opera */
+    0% {width:100%}
+    40% {width:0%}
+    60% {width:0%;}
+    100% {width:100%;}
+}
+@keyframes showHide {
+    0% {width:100%}
+    40% {width:0%}
+    60% {width:0%;}
+    100% {width:100%;}
+}
+
+
+#cf {
+  position:relative;
+  max-height:301px;
+  /*width:450px;*/
+
+  width:100%;
+  height:100%;
+  /*overflow:hidden; */
+  /*width:inherit;*/
+
+  /*max-height: auto;*/
+
+  /*margin:0 auto;*/
+}
+
+#cf img {
+  position:absolute;
+  
+  /*height:100%;*/
+  /*width:100%;*/
+
+  opacity: 0;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  animation-name: cfFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 24s;  /* 6*4 */
+}
+
+
+@keyframes cfFadeInOut {
+  /* fade out */
+  0% {
+    opacity:0;
+  }
+  5% {
+    opacity:1;
+  }
+  /* fade in */
+  14.28% {
+    opacity:1;
+  }
+  19.28% {
+    opacity:0;
+  }
+}
+
+#cf img:nth-of-type(6) {
+  animation-delay: 20s;
+}
+#cf img:nth-of-type(5) {
+  animation-delay: 16s;
+}
+#cf img:nth-of-type(4) {
+  animation-delay: 12s;
+}
+#cf img:nth-of-type(3) {
+  animation-delay: 8s;
+}
+#cf img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+#cf img:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+
+#ef {
+  position:relative;
+  max-height:301px;
+  /*width:450px;*/
+
+  width:100%;
+  height:100%;
+  /*overflow:hidden; */
+  /*width:inherit;*/
+
+  /*max-height: auto;*/
+
+  /*margin:0 auto;*/
+}
+
+#ef img {
+  position:absolute;
+  
+  /*height:100%;*/
+  /*width:100%;*/
+
+  opacity: 0;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+  animation-name: cfFadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 24s;  /* 8*4 */
+}
+
+
+@keyframes cfFadeInOut {
+  /* fade out */
+  0% {
+    opacity:0;
+  }
+  5% {
+    opacity:1;
+  }
+  /* fade in */
+  14.28% {
+    opacity:1;
+  }
+  19.28% {
+    opacity:0;
+  }
+}
+#ef img:nth-of-type(8) {
+  animation-delay: 21s;
+}
+#ef img:nth-of-type(7) {
+  animation-delay: 18s;
+}
+#ef img:nth-of-type(6) {
+  animation-delay: 15s;
+}
+#ef img:nth-of-type(5) {
+  animation-delay: 12s;
+}
+#ef img:nth-of-type(4) {
+  animation-delay: 9s;
+}
+#ef img:nth-of-type(3) {
+  animation-delay: 6s;
+}
+#ef img:nth-of-type(2) {
+  animation-delay: 3s;
+}
+#ef img:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none !important;
+    /* reset the text-align */
+    text-align:center;
+    /* inline-block space fix */
+    margin-right:-4px;
+    min-width: 170px;
+}
+
+html, body {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 100%;             /* need for iframe height 100% to work */
+}
+
+iframe { 
+  box-sizing: border-box;   /* make the border size be included in the height */
+  /*display: block;            make them block to fix white space margin */
+  width: 100%;
+}
+
+.hint {
+  color: #A00;
+  font-size: 10pt;
+  margin-bottom: 10px;
+}
+
+.img-process {
+  /*width: 100%;*/
+  margin: 5px;
+  max-height: 200px; 
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 1;
+}
+.img-process:hover{
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.centeredd {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+</style>
+
+<!doctype html>
+<html lang="en">
+  <head>
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <title>DCSN</title>
+      <meta property="og:image" content="fig/website"/>
+      <meta property="og:title" content="DCSN" />
+
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"><!-- <link rel="stylesheet" href="../css/bootstrap-theme.min.css"> -->
+
+      <!-- Google fonts -->
+      <!-- <link href="../css/google-fonts.css" rel="stylesheet" type="text/css"> -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Open+Sans:300italic,400italic,600italic,400,700,300,600" rel="stylesheet" type="text/css">
+
+      <!-- Photoswipe -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.css" rel="stylesheet">
+
+      <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+      </script>
+
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  <script>
+  function resizeIframe(obj) {
+    obj.style.height = 0;
+    obj.style.height = (obj.contentWindow.document.body.scrollHeight + 5) + 'px';
+  }
+
+
+
+
+  
+</script>
+    <script language="JavaScript">
+
+      function resize_iframe()
+      {
+        obj = document.getElementById("myiframe")
+
+        obj.style.height = 0;
+        obj.style.height = (obj.contentWindow.document.body.scrollHeight) + 'px';
+        
+        document.getElementById("cf").style.height = document.getElementById("lastimage").height + 8;
+      }
+      window.onresize=resize_iframe; 
+      
+
+    </script>
+
+  </head>
+
+  <body>
+    <script src="zepto.min.js"></script>
+  <script>
+    window.addEventListener('message', function(event) {
+      if(height = event.data['height']) {
+        $('iframe').css('height', height + 'px')
+      }
+    });
+    
+
+    // var resizeEvent = new Event('resize');
+    // window.dispatchEvent(resizeEvent);
+    
+  </script>
+  <div class="container">
+
+
+    <!-- ====================================================== -->
+    <!-- ===================== TITLE ========================== -->
+    <!-- ====================================================== -->
+    <center>
+          <div class="title">DCSN: Deep Compressed Sensing Network for Efficient Hyperspectral Data Transmission of Miniaturized Satellite</div>
+    </center>
+   
+
+ <center>
+      <div class="row row-eq-height" style="margin-bottom: -10px">
+        <!-- <div class="col-sm-12"> -->
+        <div class="col-sm-8 col-sm-offset-2">
+          <div class="col-sm-3" style="margin-bottom: 10px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="https://cchsu.info/">
+				  <img src="fig/cchsu3.jpg"  class="shadow img_authors img-circle img-responsive">
+                  <div class="author"><span style="font-weight: 600">Chih-Chung Hsu</span><br>National Cheng Kung University</div>
+              </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 10px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="https://sites.google.com/view/chiahsianglin/home?authuser=0">
+                  <img src="fig/Chia-Hsiang-Lin.png" class="shadow img_authors img-circle img-responsive">
+                  <div class="author"><span style="font-weight: 600"> Chia-Hsiang Lin</span><br>National Cheng Kung University</div>
+              </a>
+            <!-- </div> -->
+          </div>
+          <div class="col-sm-3" style="margin-bottom: 10px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="https://sites.google.com/view/chiahsianglin/lab?authuser=0">
+                  <img src="fig/Chi-Hung-Kao.jpg" class="shadow img_authors img-circle img-responsive">
+                  <div class="author"><span style="font-weight: 600">Chi-Hung Kao</span><br>National Cheng Kung University</div>
+              </a>
+            <!-- </div> -->
+          </div>
+		  <div class="col-sm-3" style="margin-bottom: 10px">
+            <!-- <div class="col-sm-12"> -->
+              <a href="https://sites.google.com/view/chiahsianglin/lab?authuser=0">
+                  <img src="fig/yenchenglin.JPG" class="shadow img_authors img-circle img-responsive">
+                  <div class="author"><span style="font-weight: 600">Yen-Cheng Lin</span><br>National Cheng Kung University</div>
+              </a>
+            <!-- </div> -->
+          </div>
+        </div>
+      <!-- </div> -->
+    </div>
+    </center>
+
+
+  <!-- ====================================================== -->
+  <!-- ===================== TEASER ============== -->
+  <!-- ====================================================== -->
+
+    <br>
+	  <!-- <center> -->
+    <!-- <div class="row section center row-eq-height"> -->
+	<!-- <div id="cf"> -->
+      <!-- <div class="col center col-sm-8 col-sm-offset-4"> -->
+		<!-- <center> -->
+          <!-- <img src="fig/log_SAM_0606.png" class="img-responsive" width="350" height="350" id="firstimage"/> -->
+		  <!-- <img src="fig/log_RMSE_0606.png" class="img-responsive" width="350" height="350"/> -->
+		  <!-- <img src="fig/log_PSNR_0606.png" class="img-responsive" width="350" height="350"/> -->
+	    <!-- </div>   -->
+	    <!-- <div class="col center col-sm-8 col-sm-offset-3"> -->
+		  <!-- <img src="fig/City-SR.JPG" class="middle" width="630" height="290" align="middle " /> -->
+          <!-- <img src="fig/Mou-SR.JPG" class="middle" width="630" height="290" align="middle "/> -->
+          <!-- <img src="fig/Farm-SR.JPG" class="middle" width="630" height="290" align="middle "/> -->
+          <!-- <img src="fig/Lake-SR.JPG" class="middle" width="630" height="290" align="middle " id="lastimage"/> -->
+		<!-- <center> -->
+        <!-- </div> -->
+	<!-- </div> -->
+      <!-- <span style="font-size:14px">The results of Our DCSN. -->
+      <!-- </span> -->
+      
+    <!-- </div> -->
+  <!-- </center> -->
+  <br>
+  <center>
+    <div class="row section center row-eq-height">
+      <div class="col center col-sm-1000 col-sm-offset-3">
+        <div id="cf">
+		<center>
+		  <img src="fig/log_SAM_TNR.png" class="img-responsive" width="600" height="600" id="firstimage" />
+		  <img src="fig/log_RMSE_TNR.png" class="img-responsive" width="600" height="600" /> 
+		  <img src="fig/log_PSNR_TNR.png" class="img-responsive" width="600" height="600"/>
+		  <img src="fig/log_SAM_TNR.png" class="img-responsive" width="600" height="600"/>
+		  <img src="fig/log_RMSE_TNR.png" class="img-responsive" width="600" height="600"/>
+		  <img src="fig/log_PSNR_TNR.png" class="img-responsive" width="600" height="600"id="lastimage"/>
+		</center>
+        </div>
+	  </div>      
+    </div>
+		<div style="height: 130px;">&nbsp;</div> 
+
+  </center>
+   <center>
+  <br>
+  	<!-- <div style="width: 100px;">&nbsp;</div>  <div class="row section" >The quantitative and qualitative results of DCSN.</div> -->
+  	  <div style="text-align: center;">
+	<span style="font-size:22px; ">The quantitative and qualitative results of DCSN.</span></div>
+	</center>
+
+	
+	
+	<div style="height: 100px;">&nbsp;</div> 
+
+    <!-- ====================================================== -->
+    <!-- ===================== ABSTRACT ======================= -->
+    <!-- ====================================================== -->
+    <div class="row section">
+      <!-- <div class="col-xs-8 col-xs-offset-2 text-justify"> -->
+      <div class="section_title">Abstract</div>
+      <p> <!-- style="text-indent: 30px" -->
+        Requirements of compressed sensing (CS) techniques
+		targeted at miniaturized hyperspectral satellite applications
+		include lightweight onboard hardware, high-speed sensing,
+		low sampling rate for compressing the massive volume of typical
+		hyperspectral data, and noise robustness for reliable data transmission
+		to the ground station. We achieve all these aims via deep
+		learning, and neural networks resulted from which can be implemented
+		on-chip, thereby allowing light hardware implementation.
+      </p>
+      <p> 
+		Our neural networks were trained from small-scaled data, but,
+		even so, the resulting encoder used in the CS stage achieves a very
+		low sampling rate and very high speed. Unlike typical network
+		training, the input/output pairs are not square but stripe-like
+		images, partly because compressed acquisition does not allow
+		performing compression after obtaining complete data cube, and
+		partly because stripe-like acquisition well matches the widely
+		adopted pushbroom hyperspectral sensing schemes. Even with
+		such hard restriction caused by nontraditional training pairs,
+		the resulting decoder still reconstructs the hyperspectral image
+		with high accuracy. To match the requirement of pushbroom
+		sensing, a lightweight encoder is proposed to compress the stripelike
+		images immediately. Meanwhile, Multi-scale Feature fusion
+		Block (MFB) and Aggregation (MFA) modules are proposed to
+		form our decoder for enhancing the feature representation of the
+		compressed acquisitions. Furthermore, we achieve joint spatial
+		and spectral super-resolution progressively, ensuring accurate
+		hyperspectral reconstruction via a low-rank-driven decoder. The
+		encoder and decoder are trained in an end-to-end manner,
+		where the noise-robustness is forced during the training stage.
+      </p>
+	  <p> 
+		Comprehensive experiments demonstrate the superiority of the
+		proposed hyperspectral compressed sensing method, as well
+		as its one-shot transfer learning (OTL) based extension, both
+		quantitatively and qualitatively.
+      </p>
+      <!-- </div> -->
+    </div>
+    
+
+
+    <!-- ====================================================== -->
+    <!-- ===================== LINKS ========================== -->
+    <!-- ====================================================== -->
+    <center>
+    <div class="row section" style="margin-bottom: -12px">
+      <div class="col-sm-10 col-sm-offset-3">
+      <!-- <div class="col-sm-12 center"> -->
+			<div class="col-sm-3" style="margin-bottom: 12px">
+			  <!-- <div class="col-sm-12"> -->
+				<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9257426">
+					<img src="fig/PDF.jpg" class="img_links img-responsive">
+					<div class="author">Paper</div>
+				</a>
+			  <!-- </div> -->
+			</div>
+			<div class="col-sm-3" style="margin-bottom: 12px">
+			  <!-- <div class="col-sm-12"> -->
+				<a href="https://box.skoltech.ru/index.php/s/ib52BOoV58ztuPM">
+					<img src="fig/github.png" class="img_links img-responsive" >
+					<div class="author">Code</div>
+				</a>
+			  <!-- </div> -->
+			</div>
+      <!-- </div> -->
+        </div>
+    </div>
+  </center>
+
+
+    <!-- ====================================================== -->
+    <!-- ===================== Main idea ======================= -->
+    <!-- ====================================================== -->
+    <div class="row section">
+      <!-- <div class="col-xs-8 col-xs-offset-2 text-justify"> -->
+      <div class="section_title">Main idea</div>
+      <p> <!-- style="text-indent: 30px" -->
+       The overall flow is to compressively sense the hyperspectral data by our encoder (in real-time), and then to decode the compressed signal by our decoder. 
+	   In order to be used on miniaturized satellite, a lightweight encoder with a stripe-like data sensing strategy is proposed. 
+	   The network architecture of the proposed encoder is illustrated in left part of Fig.1. 
+	   The encoder only stacked three convolutional layers consisting of one 3 x 3 and two 3 x 1 kernels with LeakyReLU activation function.
+      </p>
+      <p>
+       Instead of putting such complicated network components on the encoder, 
+	   we remain most parts of feature representation learning on the decoder to boost the efficiency of the communication between the miniaturized satellite and the ground station. 
+      </p>
+      <p>
+		Our decoder shown as right part of Fig.1, and it comprises four parts to progressively restore the spatial and spectral information from the noise-corrupted compressed data, 
+		to achieve joint spatial and spectral resolution enhancement. First, an effective backbone is selected to enrich the feature representation for the compressed signal. 
+		Next, we upscale the spatial resolution using transposed convolutional layers. 
+		Then, an extra convolutional layer is adopted to learn how to decode the spectral information from the output of the previous stage. 
+		Finally, the full spectral information can be super-resolved by the last convolutional layer.      </p>
+      <p>
+		In our MFB, each feature map will be squeezed by a convolutional layer named squeeze layer, followed by concatenating it to the next feature map. 
+		An example is illustrated in Fig. 2, in the second layer (say, green and blue blocks), 
+		the input feature map (green and blue) will be convoluted by a 3 x 3 kernel and followed by concatenating them to the next layers (brown, blue, and green blocks), 
+		where the feature map indicated in brown is equivalent to have a larger receptive field as it has passed through two 3 x 3 kernels. 
+		Therefore, we achieve the multi-scale feature aggregation and fusion module, 
+		by the nature of the equivalence between the large receptive field-wise feature map with one larger kernel size and the several stacked convolution operations with smaller kernel size.      </p>
+	<center>
+		 <div class="col-sm col-centered">
+			  <img src="fig/DCSN_flowchart.png" class="img-responsive" width=750 style="display:block; margin:auto;"/>
+			  <span style="font-size:20px">Fig. 1: Network architecture of the proposed DCSN for hyperspectral compressed sensing.
+		  </span>
+		 </div>
+		<div style="height: 50px;">&nbsp;</div> 
+		 <div class="col-sm col-centered">
+		  <img src="fig/DCSN_MFB.png" class="img-responsive" width=750  style="display:block; margin:auto;"/>
+		  <span style="font-size:20px">Fig. 2: Network architecture of the proposed MFB block.
+		  </span>
+		 </div>
+	</center>
+
+      <!-- </div> -->
+    </div>
+      <!-- ====================================================== -->
+    <!-- ============== PhotoSwipe ============================ -->
+    <!-- ====================================================== -->
+    <!-- <div class="container"> -->
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+          <!-- Background of PhotoSwipe. 
+               It's a separate element, as animating opacity is faster than rgba(). -->
+          <div class="pswp__bg"></div>
+
+          <!-- Slides wrapper with overflow:hidden. -->
+          <div class="pswp__scroll-wrap">
+
+              <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+              <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+              <div class="pswp__container">
+                  <div class="pswp__item"></div>
+                  <div class="pswp__item"></div>
+                  <div class="pswp__item"></div>
+              </div>
+
+              <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+              <div class="pswp__ui pswp__ui--hidden">
+
+                  <div class="pswp__top-bar">
+
+                      <!--  Controls are self-explanatory. Order can be changed. -->
+
+                      <div class="pswp__counter"></div>
+
+                      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                      <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                      <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                      <!-- element will get class pswp__preloader- -active when preloader is running -->
+                      <div class="pswp__preloader">
+                          <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                              <div class="pswp__preloader__donut"></div>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                      <div class="pswp__share-tooltip"></div> 
+                  </div>
+
+                  <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                  </button>
+
+                  <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                  </button>
+
+                  <div class="pswp__caption">
+                      <div class="pswp__caption__center"></div>
+                  </div>
+
+                </div>
+
+              </div>
+
+        </div>
+
+  
+    <!-- ====================================================== -->
+    <!-- ============== Restoration process =================== -->
+    <!-- ====================================================== -->
+    <div class="row section">
+      <div class="section_title">Visualization & Table
+      </div>
+
+      <br>
+        <center>
+    <div class="row section center row-eq-height">
+      <div class="col center col-sm-8 col-sm-offset-2">
+        <div id="ef">
+		<center>
+		  <img src="fig/City-SR1.jpg" class="img-responsive" width="800" height="600" id="firstimage"/>
+		  <img src="fig/Mou-SR1.jpg" class="img-responsive" width="800" height="600"/>
+		  <img src="fig/Farm-SR1.jpg" class="img-responsive" width="800" height="600"/>
+		  <img src="fig/Lake-SR1.jpg" class="img-responsive" width="800" height="600"/>
+		  <img src="fig/City-SR1.jpg" class="img-responsive" width="800" height="600"/>
+		  <img src="fig/Mou-SR1.jpg" class="img-responsive" width="800" height="600"/>
+		  <img src="fig/Farm-SR1.jpg" class="img-responsive" width="800" height="600"/>
+		  <img src="fig/Lake-SR1.jpg" class="img-responsive" width="800" height="600"id="lastimage"/>
+		</center>
+        </div>
+	  </div>
+	  	<!-- <div style="height: 150px;">&nbsp;</div>  -->
+      <!-- <span style="font-size:14px">The visualization resulted of our DCSN. -->
+      <!-- </span> -->
+      
+    </div>
+		</center>
+  	<div style="height: 150px;">&nbsp;</div> 
+
+      <div class="row row-centered center" id="methods_table" style="margin-bottom: 15px">
+        <!-- <div class="col-sm col-centered"> -->
+          <!-- <img src="fig/City-SR1.JPG" class="img-responsive" width="800" height="600" align="left-side "/> -->
+        <!-- </div> -->
+
+        <!-- <div class="col-sm col-centered"> -->
+          <!-- <img src="fig/Mou-SR1.JPG" class="img-responsive" width="800" height="600" align="left-side "/> -->
+        <!-- </div> -->
+
+        <!-- <div class="col-sm col-centered"> -->
+          <!-- <img src="fig/Farm-SR1.JPG" class="img-responsive" width="800" height="600" align="left-side "/> -->
+        <!-- </div> -->
+
+        <!-- <div class="col-sm col-centered"> -->
+          <!-- <img src="fig/Lake-SR1.JPG" class="img-responsive" width="800" height="600" align="left-side "/> -->
+        <!-- </div> -->
+
+        <div class="col-sm col-centered">
+          <img src="fig/Table I.jpg" class="img-responsive" width="1200" height="800" align="left-side "/>
+        </div>
+
+        <div class="col-sm col-centered">
+          <img src="fig/Table II.jpg" class="img-responsive" width="1200" height="800" align="left-side "/>
+        </div>
+      </div>
+      
+      <br>
+      <br>
+      <!-- <div class="section_title">Comparison with other methods</div> -->
+      <!-- <br> -->
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- ============== Comparison ============================ -->
+    <!-- ====================================================== -->
+    
+
+    <!-- </div> -->
+    <!-- <iframe  id="myiframe" src="image_compare.html" scrolling="no" style="border-width: 0px;width: 100%;margin: 0;padding: 0" ></iframe> -->
+
+  
+    <div class="container">
+    <br>
+    <div class="row section" style="padding-bottom: 0px">
+      <div class="section_title">Peer methods</div>
+      <div style="font-size: 10pt; margin-left: 35px">
+      <!-- <p> -->
+        <ul>
+      <li>
+        C.-H. Lin, J. M. Bioucas, T.-H. Lin, Y.-C. Lin, and C.-H. Kao, <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9104363">"A New Hyperspectral Compressed Sensing Method for Efficient Satellite Communications"</a> IEEE SAM, 2020
+      </li>
+      <li>
+	  G. Mart´ın and J. M. Bioucas-Dias,  <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7452370">"Hyperspectral Blind Reconstruction From Random Spectral Projections"</a> IEEE JSTARS, 2016
+      </li>
+      <li>
+      Y. Wang, L. Lin, Q. Zhao, T. Yue, D. Meng, and Y. Leung, <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8119735">"Compressive Sensing of Hyperspectral Images via Joint Tensor Tucker Decomposition and Weighted Total Variation Regularization"</a> IEEE GRSS, 2017
+      </li>
+      <li>
+	  L. Zhang, W. Wei, Y. Zhang, H. Yan, F. Li, and C. Tian, <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7433422">"Locally Similar Sparsity-Based Hyperspectral Compressive Sensing Using Unmixing"</a> IEEE TCI, 2016
+      </li>
+       </ul>
+    </div>
+    </div>
+
+    <div class="row section">
+      <div class="section_title">Acknowledgements</div>
+      This study was supported in part by the Ministry of Science and Technology(MOST), Taiwan, under grants MOST 108-2634-F-007-009, 109-2634-F-007-013, 107-2218-E-020-002-MY3; partly by the Young Scholar Fellowship Program (Einstein Program) of Ministry of Science and Technology, Taiwan, under Grant MOST 108-2636-E-006-012; and partly by the Higher Education Sprout Project of Ministry of Education (MOE) to the Headquarters ofUniversity Advancement at National Cheng Kung University (NCKU).
+    </div>
+
+    <center>
+    <div class="row row-eq-height" style="margin-bottom: 18px; margin-top: 10px" >
+       
+          <div class="col-sm-6" style="margin-bottom: 12px">
+              <a href="https://www.most.gov.tw/?l=en">
+                  <img src="fig/MOST.jpg" class="img-responsive">
+              </a>
+          </div>
+          <div class="col-sm-4" style="margin-bottom: 10px">
+              <a href="https://web.ncku.edu.tw/index.php?Lang=en">
+                  <img src="fig/nckulogo.jpg" class=" img-responsive">
+              </a>
+          </div>
+    </div>
+    </center>
+
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script> -->
+
+
+    <!-- <script type="text/javascript"> -->
+
+      <!-- function change_height_cf(el) { -->
+        <!-- if (el.height > 0) { -->
+               <!-- document.getElementById("cf").style.height = el.height + 8; -->
+        <!-- }; -->
+      <!-- }; -->
+      
+
+       <!-- $(document).ready(function(){ -->
+            <!-- $('#firstimage').on('load', function(){ -->
+               <!-- console.log(2); -->
+                <!-- change_height_cf(document.getElementById("firstimage")); -->
+            <!-- }); -->
+
+            <!-- if ($('#firstimage')[0].complete) { -->
+              <!-- console.log(3); -->
+              <!-- change_height_cf(document.getElementById("firstimage")); -->
+            <!-- }; -->
+
+            <!-- $('#lastimage').on('load', function(){ -->
+              <!-- console.log(2); -->
+              <!-- change_height_cf(document.getElementById("lastimage")); -->
+            <!-- }); -->
+            <!-- if ($('#lastimage')[0].complete) { -->
+              <!-- console.log(3); -->
+              <!-- change_height_cf(document.getElementById("lastimage")); -->
+            <!-- }; -->
+
+          <!-- }); -->
+      
+    <!-- </script> -->
+    
+
+   <!-- photoswipe -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js"></script> -->
+
+
+
+    <!-- <script src="img-gallery.js"></script> -->
+    <!-- Google Analytics -->
+<!-- <!--     <script type="text/javascript"> -->
+      <!-- document.getElementById("cf").style.height = document.getElementById("lastimage").height + 8; -->
+    <!-- </script> --> 
+  <!-- <script> -->
+    <!-- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ -->
+    <!-- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), -->
+    <!-- m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) -->
+    <!-- })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); -->
+
+    <!-- ga('create', 'UA-88902601-1', 'auto'); -->
+    <!-- ga('send', 'pageview', { -->
+      <!-- 'page': '/deep_image_prior', -->
+      <!-- 'title': '' -->
+    <!-- }); -->
+  <!-- </script> -->
+  <!-- End Google Analytics -->
+    <!-- Yandex.Metrika counter -->
+    <!-- <script type="text/javascript"> -->
+      <!-- (function (d, w, c) { -->
+          <!-- (w[c] = w[c] || []).push(function() { -->
+              <!-- try { -->
+                  <!-- w.yaCounter41551219 = new Ya.Metrika({ -->
+                      <!-- id:41551219, -->
+                      <!-- clickmap:true, -->
+                      <!-- trackLinks:true, -->
+                      <!-- accurateTrackBounce:true, -->
+                      <!-- webvisor:true -->
+                  <!-- }); -->
+              <!-- } catch(e) { } -->
+          <!-- }); -->
+
+          <!-- var n = d.getElementsByTagName("script")[0], -->
+              <!-- s = d.createElement("script"), -->
+              <!-- f = function () { n.parentNode.insertBefore(s, n); }; -->
+          <!-- s.type = "text/javascript"; -->
+          <!-- s.async = true; -->
+          <!-- s.src = "https://mc.yandex.ru/metrika/watch.js"; -->
+
+          <!-- if (w.opera == "[object Opera]") { -->
+              <!-- d.addEventListener("DOMContentLoaded", f, false); -->
+          <!-- } else { f(); } -->
+      <!-- })(document, window, "yandex_metrika_callbacks"); -->
+  <!-- </script> -->
+  <!-- <noscript><div><img src="https://mc.yandex.ru/watch/41551219" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
+
+</body>
+</html>
+ 
