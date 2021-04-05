@@ -3,13 +3,12 @@
 Website: https://chihungkao.github.io/DCSN/DCSN
 
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
 
 
 
-### =====================================================================
+### ====================================================================
 # Source code
-https://github.com/ChiHungKao/DCSN/releases/tag/DCSN_code
+> https://github.com/ChiHungKao/DCSN/releases/tag/DCSN_code
 
 ## Dependencies
 - To generate datasets, you need matlab.
