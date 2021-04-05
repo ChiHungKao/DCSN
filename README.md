@@ -2,22 +2,22 @@
 
 Website: https://chihungkao.github.io/DCSN/DCSN
 
-### Source code
+# Source code
 
-# Dependencies
+## Dependencies
 - To generate datasets, you need matlab.
 - To train and test DCSN, you need python3.6, pytorch 1.5.1, cuda 10.1. (Implemented on Ubuntu OS)
 
-# Training and testing dataset
+## Training and testing dataset
 - To generate datasets, please read README.md in folder 'data_preprocessing/'.
 
-# Training
+## Training
 - run 'train_sr.py'
 
-# Testing
+## Testing
 - run 'testing.py'
 
-### Citation:
+# Citation:
 ```
 @ARTICLE{9257426,
   author={C. -C. {Hsu} and C. -H. {Lin} and C. -H. {Kao} and Y. -C. {Lin}},
